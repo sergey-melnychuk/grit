@@ -1,0 +1,18 @@
+[package]
+name = "grit"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Encrypt a payload with AES-256-GCM and hide it in the low bits of a PNG file"
+
+[dependencies]
+image = { version = "0.25", features = ["png"] }
+sha3 = "0.10"
+aes-gcm = "0.10"
+rand = "0.8"
+rand_chacha = "0.3"
+clap = { version = "4.4", features = ["derive"] }
+argon2 = "0.5"
+rpassword = "7"
+flate2 = "1"
+zeroize = { version = "1", features = ["derive"] }
